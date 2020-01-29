@@ -3,6 +3,8 @@ package View;
 
 import Controller.LoginController;
 import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
 
 public class Login extends javax.swing.JFrame {
 
@@ -122,7 +124,9 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_TextUsuarioActionPerformed
 
     private void ButtonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonEntrarActionPerformed
-        controller.fizTarefa();
+        controller.botaoEntrar();
+        System.out.println(TextUsuario.getText());
+        System.out.println(TextSenha.getText());
     }//GEN-LAST:event_ButtonEntrarActionPerformed
 
     private void TextSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextSenhaActionPerformed
@@ -175,7 +179,24 @@ public class Login extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     public void exibeMensagem(String mensagem) {
-        JOptionPane.showMessageDialog(null, mensagem);       
-        
+        JOptionPane.showMessageDialog(null, mensagem);          
     }
+
+    public JPasswordField getTextSenha() {
+        return TextSenha;
+    }
+
+    public void setTextSenha(JPasswordField TextSenha) {
+        this.TextSenha = TextSenha;
+    }
+
+    public JTextField getTextUsuario() {
+        return TextUsuario;
+    }
+
+    public void setTextUsuario(JTextField TextUsuario) {
+        this.TextUsuario = TextUsuario;
+    }
+    
+    
 }
